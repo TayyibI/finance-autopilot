@@ -33,7 +33,7 @@ docker-compose up --build
 
 Open **http://localhost:3000**. Backend API at **http://localhost:8000/docs**.
 
-> **For instant demo without yfinance:** enter ticker `DEMO` — returns hardcoded Apple financials, runs all 6 agents, no external API calls needed.
+> **For instant demo without yfinance:** enter ticker `DEMO` — returns hardcoded Ryan Air financials, runs all 6 agents, no external API calls needed.
 
 ### Local Development
 
@@ -112,7 +112,7 @@ npm run dev                        # http://localhost:3000
 
 ### Pipeline: Ingest → Transform → Validate → Output
 
-**Ingest** (`utils/data_ingestion.py`): `yfinance` pulls 3 years of annual income statement data. A daemon thread enforces a 5-second timeout on `stock.info` (which can hang on bad tickers). Ticker `DEMO` bypasses yfinance entirely and returns hardcoded Apple 2021–2023 data — zero external calls, guaranteed demo stability.
+**Ingest** (`utils/data_ingestion.py`): `yfinance` pulls 3 years of annual income statement data. A daemon thread enforces a 5-second timeout on `stock.info` (which can hang on bad tickers). Ticker `DEMO` bypasses yfinance entirely and returns hardcoded Ryan Air 2021–2023 data — zero external calls, guaranteed demo stability.
 
 **Transform** (6 agents, `agents/`): Each agent is a pure function that takes typed Pydantic inputs and returns typed Pydantic outputs. They run sequentially with full dependency injection:
 
