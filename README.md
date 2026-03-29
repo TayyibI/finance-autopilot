@@ -202,7 +202,7 @@ The test suite covers:
 
 | Dependency | Version | Usage | Licence |
 |---|---|---|---|
-| Anthropic Claude API | `claude-opus-4-5` | All 6 agents + interrogation | [Anthropic AUP](https://www.anthropic.com/legal/aup) |
+| Anthropic Claude API | `claude-haiku-4-5` | All 6 agents + interrogation | Anthropic AUP |
 | Anthropic `web_search_20260209` | — | Researcher: live financial news | Anthropic server-side tool |
 | yfinance | `0.2.40` | Historical income statement ingestion | Apache 2.0 (unofficial Yahoo data) |
 | FastAPI | `0.111.0` | Backend REST + SSE framework | MIT |
